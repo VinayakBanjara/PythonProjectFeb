@@ -3,11 +3,10 @@ from django.shortcuts import render
 
 # Create your views here.
 def SignUp(request):
-    print("Signup method is working...")
-    a=10
-    b=20
-    print(a+b)
-    return render(request, "index.html")1
+    print("Hello...")
+    email = request.GET['email']
+    psw = request.GET['pswname']
+    return render(request, "index.html")
 
 
 def abc(request):

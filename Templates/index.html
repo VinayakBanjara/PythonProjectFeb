@@ -4,7 +4,49 @@
   <meta charset="UTF-8">
   <title>$Title$</title>
 </head>
+<script>
+  function passwordvalidation()
+  {
+  var psw=document.getElementById("pswid").value;
+  var rpsw=document.getElementById("rpswid").value;
+  if psw==rpsw{
+    return true
+  }
+  alert("incorrect password")
+  return false
+  }
+</script>
 <body>
-$END$
+<form action="/SignUp" onsubmit="return passwordvalidation()">
+  <table border="1" align="center">
+    <tr>
+      <th>Email</th>
+      <td>
+        <input type="text" placeholder="Enter Your Email Id" name="email" id="email" required>
+      </td>
+    </tr>
+    <tr>
+      <th>Password</th>
+      <td>
+        <input type="password" name="pswname" id="pswid" placeholder="enter password" required>
+      </td>
+    </tr>
+    <tr>
+      <th>Repeat Password</th>
+      <td>
+        <input type="password" name="rpswname" id="rpswid" placeholder="repeat password" required>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <button type="button" >Cancel</button>
+      </td>
+      <td>
+        <button type="submit">SignUp</button>
+      </td>
+    </tr>
+
+  </table>
+</form>
 </body>
 </html>
